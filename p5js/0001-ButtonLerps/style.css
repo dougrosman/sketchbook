@@ -4,13 +4,3 @@
     height: 100vh;
     background-color: black;
 }
-
-#test {
-
-border: 2px solid white;
-position: fixed;
-
-right: 20px;
-bottom: 20px;
-
-}
