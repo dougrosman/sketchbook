@@ -7,7 +7,7 @@ var b2;
 var x = 0;
 var y = 0;
 var rate = 250;
-var num = 40;
+var num = 50;
 var canvas;
 function setup() {
   canvas = createCanvas(windowWidth,windowHeight);
