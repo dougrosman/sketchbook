@@ -108,12 +108,10 @@ function alignButtons(_buttons) {
     // let rowAmount = Math.floor((width)/(_buttons[0].w + _buttons[0].m));
     let rowAmount = Math.floor((width)/(_buttons[0].w));
 
-    
     if(i % rowAmount == 0 && i !== 0) {
       x = 0;
       y = 0;
       rowCounter++;
-      
     }
     
     if(rowCounter > 0) {
@@ -129,22 +127,17 @@ function alignButtons(_buttons) {
       
       points.push(createVector(x, _buttons[i].y));
     } else {
-      
       points.push(createVector(x, y));
     }
     
-    x+=_buttons[0].w+_buttons[0].m;
-    
+    x+=_buttons[0].w+_buttons[0].m; 
   }
   
   for(let i = 0; i < _buttons.length; i++) {
     _buttons[i].x = points[i].x;
     _buttons[i].y = points[i].y;
-    
   }
-  
   return _buttons;
-  
 }
 
 
@@ -157,7 +150,6 @@ function drawButtons(_buttons) {
 
 
 var Button = function(size, _margin, _margin_setter, _color_setter) {
-  
   
   this.w = size;
   this.h = Math.floor(random(size, 3*size));
@@ -174,25 +166,23 @@ var Button = function(size, _margin, _margin_setter, _color_setter) {
   } else {
   this.m = size/4;
   }
-  
-  
 };
 
 Button.prototype.draw = function(_x, _y) {
   let space = this.w/15;
   fill(this.c);
-  stroke(0, 0);
-  strokeWeight(space*2);
+  noStroke();
+  // stroke(0, 0);
+  // strokeWeight(space*2);
   rect(_x, _y, this.w+(space/2), this.h+(space/2), space);
   
   //strokeCap(PROJECT);
-  stroke(100, 0);
-  strokeWeight(space);
-  line(_x+space, _y+space, _x+this.w-space, _y+space);
-  line(_x+space, _y+space, _x+space, _y+this.h-space);
+  // stroke(100, 0);
+  // strokeWeight(space);
+  // line(_x+space, _y+space, _x+this.w-space, _y+space);
+  // line(_x+space, _y+space, _x+space, _y+this.h-space);
   
 };
-
 
 function mousePressed() {
   let fs = fullscreen();
