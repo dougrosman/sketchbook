@@ -6,8 +6,8 @@ var b1;
 var b2;
 var x = 0;
 var y = 0;
-var rate = 150;
-var num = 50;
+var rate = 250;
+var num = 40;
 var canvas;
 function setup() {
   canvas = createCanvas(windowWidth,windowHeight);
@@ -77,12 +77,12 @@ function draw() {
   
   if(1 - lerpAmount0 < 0.0006) {
     
-    buttons1 = generateButtons(num, Math.floor(random(120, 200)), 0, false, Math.random());
+    buttons1 = generateButtons(num, Math.floor(random(140, 200)), 0, false, Math.random());
     //print("change1");
   }
   
   if(lerpAmount0 < 0.0006) {
-    buttons2 = generateButtons(num, Math.floor(random(120, 200)), 0, false, Math.random());
+    buttons2 = generateButtons(num, Math.floor(random(140, 200)), 0, false, Math.random());
     //print("change2");
   }
   
