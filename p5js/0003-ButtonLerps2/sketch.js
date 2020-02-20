@@ -6,11 +6,11 @@ var b1;
 var b2;
 var x = 0;
 var y = 0;
-var rate = 15;
+var rate = 80;
 var num = 500;
 var canvas;
 var upper = 100;
-var lower = 99;
+var lower = 30;
 function setup() {
   canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent("sketch-parent")
@@ -30,7 +30,7 @@ function windowResized() {
 }
 
 function draw() {
-  //background(0, 0, 0);
+  background(0, 0, 0);
   
   
   b1 = buttons1[0];
@@ -150,40 +150,42 @@ function drawButtons(_buttons) {
 }
 
 
-var Button = function(size, _margin, _margin_setter, _color_setter) {
+class Button {
   
-  this.w = size;
-  this.h = Math.floor(random(size, 3*size));
-  if(_color_setter <= 0.5) {
-    this.c = color((Math.floor(random(4))*9)+random(30), (Math.floor(random(4))*5)+random(20, 60), 100);
-  } else {
-    this.c = color((Math.floor(random(4))*9)+random(50, 80), (Math.floor(random(4))*5)+random(20, 60), 100);
-  }
-  this.x = 0;
-  this.y = 0;
-  
-  if(_margin_setter){
-    this.m = _margin;
-  } else {
-  this.m = size/4;
-  }
-};
+  constructor(size, _margin, _margin_setter, _color_setter) {
+    this.w = size;
+    this.h = Math.floor(random(size, 3*size));
+    if(_color_setter <= 0.5) {
+      this.c = color((Math.floor(random(4))*9)+random(30), (Math.floor(random(4))*5)+random(20, 60), 100);
+    } else {
+      this.c = color((Math.floor(random(4))*9)+random(50, 80), (Math.floor(random(4))*5)+random(20, 60), 100);
+    }
+    this.x = 0;
+    this.y = 0;
+    
+    if(_margin_setter){
+      this.m = _margin;
+    } else {
+    this.m = size/4;
+    }
+}
 
-Button.prototype.draw = function(_x, _y) {
-  let space = this.w/15;
-  fill(this.c);
-  noStroke();
-  // stroke(0, 0);
-  // strokeWeight(space*2);
-  rect(_x, _y, this.w+(space/2), this.h+(space/2), space);
-  
-  //strokeCap(PROJECT);
-  // stroke(100, 0);
-  // strokeWeight(space);
-  // line(_x+space, _y+space, _x+this.w-space, _y+space);
-  // line(_x+space, _y+space, _x+space, _y+this.h-space);
-  
-};
+  draw(_x, _y) {
+    let space = this.w/15;
+    fill(this.c);
+    noStroke();
+    // stroke(0, 0);
+    // strokeWeight(space*2);
+    rect(_x, _y, this.w+(space/2), this.h+(space/2), space);
+    
+    //strokeCap(PROJECT);
+    // stroke(100, 0);
+    // strokeWeight(space);
+    // line(_x+space, _y+space, _x+this.w-space, _y+space);
+    // line(_x+space, _y+space, _x+space, _y+this.h-space);
+    
+  }
+}
 
 function mousePressed() {
   let fs = fullscreen();
