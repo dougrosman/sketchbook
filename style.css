@@ -1,0 +1,18 @@
+body {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+}
+a {
+  color: white;
+  font-size: 3rem;
+}
+
+a:hover {
+  color: yellow;
+}
+
+span {
+  font-size: 1.5rem;
+  color: orangered;
+}

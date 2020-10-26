@@ -1,16 +1,8 @@
-
-#sketch-parent {
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-#test {
-
-border: 2px solid white;
-position: fixed;
-
-right: 20px;
-bottom: 20px;
-
+#sketch-parent {
+    background-color: black;
 }

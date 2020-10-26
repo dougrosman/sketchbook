@@ -20,7 +20,7 @@ spawn some new points.
 function setup() {
 
     // set the canvas size to the size of the browser window
-  canvas = createCanvas(windowWidth,windowHeight);
+  canvas = createCanvas(windowWidth,windowHeight-3);
 
   /* Uncomment the two lines below this comment if you want the sketch to always load in fullscreen automatically: */
 
@@ -51,7 +51,7 @@ function setup() {
 
 // Resizes the window if the window size is changed (useful when going in and out of fullscreen)
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(windowWidth, windowHeight-3);
     background(0);
 }
 

@@ -6,11 +6,11 @@ var b1;
 var b2;
 var x = 0;
 var y = 0;
-var rate = 250;
+var rate = 160;
 var num = 50;
 var canvas;
 function setup() {
-  canvas = createCanvas(windowWidth,windowHeight);
+  canvas = createCanvas(windowWidth,windowHeight-3);
   canvas.parent("sketch-parent")
   colorMode(HSB, 100);
   frameRate(60);
@@ -24,7 +24,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight-3);
   background(0);
 }
 

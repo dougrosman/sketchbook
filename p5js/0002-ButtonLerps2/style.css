@@ -1,0 +1,6 @@
+*{ padding: 0; margin: 0;} 
+
+#sketch-parent {
+    background-color: black;
+    overflow: hidden;
+}
