@@ -2,7 +2,7 @@ let particles = [];
 var numParticles = 4.0;
 
 function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(windowWidth, windowHeight-3);
   canvas.parent("sketch-parent");
   
   colorMode(HSB, 100);
@@ -25,7 +25,7 @@ function setup() {
 ///// FULLSCREEN UTILS
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight-3);
   background(100);
 }
 
